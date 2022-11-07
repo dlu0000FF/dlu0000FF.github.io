@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Windows用户凭证</title>
+      <link href="/2022/11/07/Windows%E7%94%A8%E6%88%B7%E5%87%AD%E8%AF%81/"/>
+      <url>/2022/11/07/Windows%E7%94%A8%E6%88%B7%E5%87%AD%E8%AF%81/</url>
+      
+        <content type="html"><![CDATA[<p>密码默认存储在</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%systemroot%\system32\config\</span><br></pre></td></tr></table></figure><h2 id="NTLM-Hash"><a href="#NTLM-Hash" class="headerlink" title="NTLM Hash"></a>NTLM Hash</h2><p>NTLM网络认证协议 是以NTLM HASH为凭证的一个认证协议</p><p>负责加密的进程是lsass.exe（2012前）</p><p>admin–&gt;hex &#x3D;61646d69e</p><p>61646d69e –&gt;unicode</p><p>unicode –&gt;md4 &#x3D;ntlm hash</p><p>python有个库</p><p>passlib.hash nthash</p><p><img src="https://0000ff-1306704085.cos.ap-nanjing.myqcloud.com/1657620909303-de5b2ebd-5eb2-4230-9879-041cd906f4e2.png" alt="img"></p><p>windows的认证过程</p><p>winlogon.exe -&gt;接受输入 –&gt;lsass.exe –&gt;认证</p><h3 id="LM-Hash"><a href="#LM-Hash" class="headerlink" title="LM Hash"></a>LM Hash</h3><p>流程和ntlm差不多</p><p>后面的加密不一样</p><h3 id="ntlm-挑战响应"><a href="#ntlm-挑战响应" class="headerlink" title="ntlm: 挑战响应"></a>ntlm: 挑战响应</h3><p>1、协商 2、咨询 3、验证</p><p><img src="https://0000ff-1306704085.cos.ap-nanjing.myqcloud.com/1657622390191-2b7c9033-0c8b-4eb8-a68f-c438232ed24b.png" alt="img"></p><p><img src="https://0000ff-1306704085.cos.ap-nanjing.myqcloud.com/1657622404932-7e958be8-78cd-4c93-b161-d9c19e30d9f9.png" alt="img"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 内网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>wmic</title>
       <link href="/2022/11/07/wmic/"/>
       <url>/2022/11/07/wmic/</url>
